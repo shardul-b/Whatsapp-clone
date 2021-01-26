@@ -2,12 +2,14 @@ import React from 'react';
 /*LOGO*/
 import logo from './logo.svg';
 /*CSS*/
+import Main from './components/MainComponent';
+// import Top from './components/topcomponent';
 import './App.css';
-
-function App() {
-  return (
-    <div className='top'></div>
-  );
+import './StyleSheets/top.css';
+function App(){
+	return (
+		<Main/>
+	);		  
 }
 
 export default App;

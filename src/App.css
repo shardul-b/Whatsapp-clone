@@ -1,11 +1,17 @@
-*{
+*,*::after{
   box-sizing: border-box; 
 }
 body{
   margin:0;
 }
-.top{
-  background-color: green;
-  width: 100%;
-  padding:1em;
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.flex,.flex-space{
+	display: flex;
+	align-items: center;
+}
+.flex-space{
+	justify-content: space-between;
 }
