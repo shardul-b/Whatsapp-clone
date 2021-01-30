@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import Dropdown from './DropdownComponent';
+import Search from './SearchComponent';
 class TopComponent extends Component{
 	constructor(){
 		super()
@@ -45,7 +46,8 @@ class TopComponent extends Component{
 					<div className='flex-space title-icon'>
 						<span className='title'>WhatsApp</span>
 						<div className='icons-container flex-space'>
-							<span className='fa fa-search'>{/*search*/}</span>
+							<Search/>
+							{/**/}
 						{/*Dropdpwn menu*/}
 							<Dropdown  
 							  list={this.state.option}
