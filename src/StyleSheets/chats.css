@@ -1,0 +1,32 @@
+.chat-block{
+	padding:0.5em 0;
+}
+.chat-profile{
+	/*border:1px solid red;*/
+	height: 3em;
+	width:3.6em;	
+	text-align: center;
+
+}
+.chat-profile-image{
+	border-radius: 50%;
+}
+.chat-message-details{
+	/*border:1px solid blue;*/
+	width:100%;
+	padding:0.5em 0;
+	margin-left:0.8em;
+	border-bottom:1px solid #DDD;
+}
+.chat-name{
+	font-size:0.9rem;
+}
+.chat-message{
+	font-size: 0.7rem;
+	padding:0.3rem 0;
+	color:gray;
+}
+.chat-time{
+	color:gray;
+	font-size:0.7rem;
+}

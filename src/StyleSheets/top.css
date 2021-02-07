@@ -26,11 +26,13 @@
 }
 .option-value{
 	width:60%;
-	font-size: 0.8rem;
 	padding:0.5em 0;
 	font-weight: bold;
 	/*border:1px solid red;*/
 	text-align: center; 
+}
+.option-value-text{
+	font-size: 0.9rem;
 }
 .option-icon{
 	/*border:1px solid red;*/

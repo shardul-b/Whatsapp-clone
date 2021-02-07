@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import Dropdown from './DropdownComponent';
+import {NavLink} from 'react-router-dom';
 import Search from './SearchComponent';
 class TopComponent extends Component{
 	constructor(){
@@ -58,9 +59,9 @@ class TopComponent extends Component{
 				</div>
 				<div className='options flex-space'>
 					<div className='option-icon'><span className="fa fa-camera"></span></div>
-					<div className="option-value active">CHATS</div>
-					<div className='option-value'>STATUS</div>
-					<div className='option-value'>CALLS</div>
+					<NavLink to='/chats' activeClassName='active' className='option-value'><div className='option-value-text'>CHATS</div></NavLink>
+					<NavLink to='/status' activeClassName='active' className='option-value'><div className='option-value-text'>STATUS</div></NavLink>
+					<div className='option-value option-value-text'>CALLS</div>
 				</div>
 			</div>
 		);

@@ -1,14 +1,16 @@
 import React from 'react';
-/*LOGO*/
-import logo from './logo.svg';
 /*CSS*/
 import Main from './components/MainComponent';
 // import Top from './components/topcomponent';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import './StyleSheets/top.css';
+import './StyleSheets/chats.css';
 function App(){
 	return (
-		<Main/>
+		<BrowserRouter>
+			<Main/>
+		</BrowserRouter>
 	);		  
 }
 

@@ -1,12 +1,18 @@
 *,*::after{
   box-sizing: border-box; 
+  font-size: 16px;
+  outline:none;
 }
 body{
   margin:0;
+  padding:0;
 }
 .container{
 	width: 90%;
 	margin: 0 auto;
+}
+img{
+	max-width: 100%;
 }
 .flex,.flex-space{
 	display: flex;
@@ -14,4 +20,8 @@ body{
 }
 .flex-space{
 	justify-content: space-between;
+}
+a{
+	text-decoration: none;
+	color:inherit;
 }
