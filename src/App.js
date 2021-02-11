@@ -6,6 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import './StyleSheets/top.css';
 import './StyleSheets/chats.css';
+import './StyleSheets/largeProfile.css';
+import './StyleSheets/home.css';
 function App(){
 	return (
 		<BrowserRouter>

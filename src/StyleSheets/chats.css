@@ -30,3 +30,48 @@
 	color:gray;
 	font-size:0.7rem;
 }
+/*Small Profile box*/
+.small-profile-back{
+	position: absolute;
+	height:100%;
+	width:100%;
+	background-color: rgba(0,0,0,0.5);
+	top:0;
+	left:0;
+}
+.small-profile-block{
+	z-index:1;
+	/*background-color: red;*/
+	height:16em;
+	width:14.5em;
+	position: absolute;
+	top:10%;
+	left:17%;
+
+}
+.small-profile-image-name{
+	height:14.5em;
+	width:14.5em;
+	/*border:1px solid red;*/
+}
+.small-profile-name{
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	color:#FFF;
+	padding: 0.2em 0.5em
+}
+.small-profile-icons-block {
+	padding:0.4em 0;
+	/*border:1px solid blue;*/
+	background-color: #FFF;
+}
+.personal-chat-icons{
+	/*border:1px solid red;*/
+	width:40%;
+}
+a+a{
+	margin-left:1.5em;
+}

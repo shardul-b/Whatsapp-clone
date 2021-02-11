@@ -1,0 +1,25 @@
+.large-profile{
+	background-color: #000;
+	color:#fff;
+	height:100vh;
+	width:100vw;
+	flex-direction: column;
+	justify-content: center;
+	/*border:1px solid yellow;*/
+}
+.profile-top{
+	/*border: 1px solid red;*/
+	width:100%; 
+	position: absolute;
+	top:0;
+	left:0;
+	padding:0.5em 0;
+}
+.profile-name{
+	font-weight:bold;
+	margin-right: 30%;
+}
+.group-icons{
+	width:20%;
+	/*border:1px solid red;*/
+}

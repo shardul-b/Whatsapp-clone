@@ -1,22 +1,10 @@
-import React from 'react';
+import React,{useState, useRef, useEffect} from 'react';
 import Chat from './MainChatComponent';
-import SmallProfile from './SmallProfileComponent'
+import SmallProfile from './SmallProfileComponent';
 import { Link } from 'react-router-dom';
-function profileDisplay(...profileDetails){
-	//alert(profileDetails)
-	return(
-		<SmallProfile details={profileDetails}/>
-	);
-}
-function chatDisplay(){
-	//alert('No')
-	return(
-		<Chat/>
-	);
-}
+
+
 function ChatComponent(props){
-	//const {name}=ChatDetails[0];
-	//console.log(props.ChatDetails[1].id)
 	const list=props.ChatDetails;
 	return(
 		<div>
@@ -25,10 +13,14 @@ function ChatComponent(props){
 			{
 				(list.length>0)?
 					list.map((val)=>(
+
 						<div className='chat-block flex' key={val.id}>
-							<div className='chat-profile' onClick={()=>profileDisplay([val.name,val.profile,val.isGroup])}>
-								<img src={val.profile} alt={val.name.match(/[A-Z]/g).join('')} className='chat-profile-image'/>
+							<div className='chat-profile'>
+								<Link to={`/smallprofile/${val.id}`}>	
+									<img src={val.profile} alt={val.name.match(/[A-Z]/g).join('')} className='chat-profile-image'/>
+								</Link>
 							</div>
+							
 							<div className='chat-message-details'>
 								<Link to={`/mainchat/${val.id}`}>
 									<div className='chat-name-time flex-space'>
