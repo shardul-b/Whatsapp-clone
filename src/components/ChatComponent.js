@@ -17,7 +17,7 @@ function ChatComponent(props){
 						<div className='chat-block flex' key={val.id}>
 							<div className='chat-profile'>
 								<Link to={`/smallprofile/${val.id}`}>	
-									<img src={val.profile} alt={val.name.match(/[A-Z]/g).join('')} className='chat-profile-image'/>
+									<img src={val.profile} alt={val.name.match(/[A-Z]/g).join('')} className='chat-profile-image' loading='lazy'/>
 								</Link>
 							</div>
 							

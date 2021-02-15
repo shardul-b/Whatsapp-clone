@@ -3,7 +3,9 @@ import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import Top from './TopComponent';
 import Chats from './ChatComponent';
 import {CHATS} from '../Shared/chats';
+import {STATUS} from '../Shared/status';
 import Status from './StatusComponent';
+import Call from './CallComponent';
 import SmallProfile from './SmallProfileComponent';
 import LargeProfile from './LargeProfileComponent';
 import Profile from './ProfileComponent';
@@ -20,7 +22,15 @@ const StatusComponent=()=>{
 	return(
 		<div>
 			<Top/>
-			<Status/>
+			<Status StatusDetails={STATUS}/>
+		</div>
+	);
+}
+const CallComponent=()=>{
+	return(
+		<div>
+			<Top/>
+			<Call/>
 		</div>
 	);
 }
@@ -52,6 +62,7 @@ function MainComponent(){
 			<Switch>
 				<Route path='/chats' component={ChatComponent}/>
 				<Route path='/status' component={StatusComponent}/>
+				<Route path='/call' component={CallComponent}/>
 				<Route path='/smallprofile/:profileId' component={SmallProfileBox}/>
 				<Route path='/largeprofile/:profileId' component={LargeProfileBox}/>
               	<Route path='/mainchat/:chatId' component={()=><MainChat messages={CHATS}/>}/>

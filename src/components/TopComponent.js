@@ -61,7 +61,7 @@ class TopComponent extends Component{
 					<div className='option-icon'><span className="fa fa-camera"></span></div>
 					<NavLink to='/chats' activeClassName='active' className='option-value'><div className='option-value-text'>CHATS</div></NavLink>
 					<NavLink to='/status' activeClassName='active' className='option-value'><div className='option-value-text'>STATUS</div></NavLink>
-					<div className='option-value option-value-text'>CALLS</div>
+					<NavLink to='/call' activeClassName='active' className='option-value'><div className='option-value-text'>CALLS</div></NavLink>
 				</div>
 			</div>
 		);

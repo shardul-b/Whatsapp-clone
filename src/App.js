@@ -8,6 +8,7 @@ import './StyleSheets/top.css';
 import './StyleSheets/chats.css';
 import './StyleSheets/largeProfile.css';
 import './StyleSheets/home.css';
+import './StyleSheets/status.css';
 function App(){
 	return (
 		<BrowserRouter>
