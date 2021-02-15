@@ -30,7 +30,7 @@ const CallComponent=()=>{
 	return(
 		<div>
 			<Top/>
-			<Call/>
+			<Call CallDetails={CHATS}/>
 		</div>
 	);
 }

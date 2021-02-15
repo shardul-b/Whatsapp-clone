@@ -41,7 +41,7 @@
 }
 .small-profile-block{
 	z-index:1;
-	/*background-color: red;*/
+	/*border:1px solid red;*/
 	height:16em;
 	width:14.5em;
 	position: absolute;
@@ -55,7 +55,7 @@
 	/*border:1px solid red;*/
 }
 .small-profile-name{
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.4);
 	position: absolute;
 	top:0;
 	left:0;
