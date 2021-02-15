@@ -18,6 +18,11 @@ const ChatComponent=()=>{
 		</div>
 	);
 }
+const MainChatComponent=({match})=>{
+	return(
+		<MainChat ChatDetails={CHATS.filter((profile)=>profile.id===parseInt(match.params.profileId, 10))[0]}/>
+	);
+}
 const StatusComponent=()=>{
 	return(
 		<div>
@@ -46,7 +51,6 @@ const SmallProfileBox=({match})=>{
 const LargeProfileBox=({match})=>{
 	return(
 		<LargeProfile profile={CHATS.filter((profile)=>profile.id===parseInt(match.params.profileId, 10))[0]}/>
-		
 	);	
 }
 const ProfileComponent=({match})=>{
@@ -65,7 +69,7 @@ function MainComponent(){
 				<Route path='/call' component={CallComponent}/>
 				<Route path='/smallprofile/:profileId' component={SmallProfileBox}/>
 				<Route path='/largeprofile/:profileId' component={LargeProfileBox}/>
-              	<Route path='/mainchat/:chatId' component={()=><MainChat messages={CHATS}/>}/>
+              	<Route path='/mainchat/:profileId' component={MainChatComponent}/>
               	<Route path='/profile/:profileId' component={ProfileComponent}/>
 				<Redirect to='/chats' compopnent={ChatComponent}/>		
 			</Switch>

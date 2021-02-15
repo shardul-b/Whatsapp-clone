@@ -10,6 +10,7 @@ import './StyleSheets/largeProfile.css';
 import './StyleSheets/home.css';
 import './StyleSheets/status.css';
 import './StyleSheets/calls.css';
+import './StyleSheets/mainChat.css';
 function App(){
 	return (
 		<BrowserRouter>

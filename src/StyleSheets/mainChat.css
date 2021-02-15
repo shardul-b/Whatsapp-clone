@@ -1,0 +1,28 @@
+/*Input box and icons*/
+.bottom-wrapper{
+	/*border:1px solid red;*/
+	position: fixed;
+	width:100%;
+	bottom:0;
+}
+.input-box-container{
+	border:1px solid blue;
+	border-radius:50px;
+	width:88%;
+}
+.message-box{
+	width:68%;
+	border:0;
+	/*border:1px solid red;*/
+	padding:0.5em 0;
+}
+/*Mic*/
+.voice-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: green;
+	width:2.5em;
+	height:2.5em;
+	border-radius: 50%;
+}
