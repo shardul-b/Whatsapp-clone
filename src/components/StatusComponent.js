@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 function StatusComponent(props){
 	let list=props.StatusDetails;
-	console.log(list);
+	//console.log(list);
 	return(
 		<div className='status-container'>
 			<div className='my-status section'>

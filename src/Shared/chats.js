@@ -23,6 +23,7 @@ export const CHATS=[
 		pinned:false,
 		mute:false,
 		isGroup:true,
+		members:['a','b','c'],
 		lastCallTime:'January 14, 9:18 PM',
 		received:true,
 		missed:true,

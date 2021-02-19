@@ -1,20 +1,65 @@
+/*Top*/
+.chat-profile-top{
+	/*border:1px solid red;*/
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	background-color: #075E54;
+	color:#FFF;
+	padding:0.3em 0;
+}
+.chat-top-profile-image{
+	height: 2em;
+	width:2em;
+	border-radius:50%;
+	/*border:1px solid blue;*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.name-details{
+	/*border:1px solid yellow;*/
+	margin-left:0.5em;
+	width:50%;
+}
+.chat-profile-name{
+	font-weight:bold;
+}
+.details{
+	font-size:0.8rem;
+}
+.chat-top-icons{
+	/*border:1px solid pink;*/
+	width:30%;
+}
+/*Message Section*/
+.messages-section{
+	height:100vh;
+	background-color: #ECE5DD;
+}
 /*Input box and icons*/
 .bottom-wrapper{
 	/*border:1px solid red;*/
+	background-color: #ECE5DD;
 	position: fixed;
 	width:100%;
 	bottom:0;
 }
 .input-box-container{
-	border:1px solid blue;
+	/*border:1px solid blue;*/
 	border-radius:50px;
 	width:88%;
+	padding:0.3em 0;
+	background-color: #FFF;
+
 }
 .message-box{
 	width:68%;
 	border:0;
 	/*border:1px solid red;*/
 	padding:0.5em 0;
+	background-color: transparent;
 }
 /*Mic*/
 .voice-wrapper{
