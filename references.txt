@@ -1,2 +1,14 @@
 https://blog.logrocket.com/building-a-custom-dropdown-menu-component-for-react-e94f02ced4a1/
 https://whatsappbrand.com/
+https://material-ui.com/components/material-icons/
+https://stackoverflow.com/questions/65971356/why-cant-i-access-the-props-directly-in-child-component
+https://stackoverflow.com/questions/24502898/show-or-hide-element-in-react
+https://stackoverflow.com/questions/27105257/storing-an-object-in-state-of-a-react-component
+https://stackoverflow.com/questions/41956465/how-to-create-multiple-page-app-using-react
+https://stackoverflow.com/questions/39281032/how-to-conditionally-apply-css-classes-in-react-js
+https://stackoverflow.com/questions/42153627/reactjs-onclick-display-component
+https://stackoverflow.com/questions/50829728/how-to-use-material-ui-icons-in-react
+https://material-ui.com/components/icons/
+https://reactjs.org/docs/hooks-intro.html
+https://reactjs.org/docs/hooks-effect.html
+https://stackoverflow.com/questions/41340379/passing-multiple-props-to-react-component

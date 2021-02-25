@@ -2,31 +2,70 @@ export const CHATOPTIONS=[
 	{
 		id:0,
 		title:'View contact',
-		key:'groupchatoption'
+		key:'chatoption',
+		link:`/profile/`,
+		toggle:''	
 	},
 	{
 		id:1,
 		title:'Media, links, and docs',
-		key:'groupchatoption'	
+		key:'chatoption',
+		link:'',
+		toggle:''	
 	},
 	{
 		id:2,
 		title:'Search',
-		key:'groupchatoption'	
+		key:'chatoption',
+		link:'',
+		toggle:'search'	
 	},
 	{
 		id:3,
 		title:'Mute notifications',
-		key:'groupchatoption'	
+		key:'chatoption',
+		link:'',
+		toggle:''
 	},
 	{
 		id:4,
 		title:'Wallpaper',
-		key:'groupchatoption'	
+		key:'chatoption',
+		link:'/wallpaper',
+		toggle:''	
 	},
 	{
 		id:5,
 		title:'More',
-		key:'groupchatoption'	
+		key:'chatoption',
+		toggle:'subListOpener',
+		submenu:[
+			{
+				id:0,
+				title:'Report',
+				key:'chatoption'
+			},
+			{
+				id:1,
+				title:'Block',
+				key:'chatoption'
+			},
+			{
+				id:2,
+				title:'Clear chat',
+				key:'chatoption'
+			},
+			{
+				id:3,
+				title:'Export chat',
+				key:'chatoption'
+			},
+			{
+				id:4,
+				title:'Add shortcut',
+				key:'chatoption'
+			}
+		],
+
 	}
 ]
