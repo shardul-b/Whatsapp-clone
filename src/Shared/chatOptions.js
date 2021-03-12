@@ -43,7 +43,7 @@ export const CHATOPTIONS=[
 			{
 				id:0,
 				title:'Report',
-				key:'chatoption'
+				key:'chatoption',
 			},
 			{
 				id:1,

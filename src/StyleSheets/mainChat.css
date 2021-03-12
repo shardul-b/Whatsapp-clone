@@ -34,6 +34,19 @@
 	width:30%;
 }
 /*Message Section*/
+.message-tip{
+	background-color: rgb(250,245,12);
+	width:80%;
+	top:10%;
+	padding:0.3rem;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 0.8rem;
+	color:gray;
+	margin:0 auto;
+	position: relative;
+	/*position: fixed;*/
+}
 .messages-section{
 	height:100vh;
 	background-color: #ECE5DD;

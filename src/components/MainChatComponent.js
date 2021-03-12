@@ -3,24 +3,40 @@ import {Link} from 'react-router-dom';
 import {GROUPCHATOPTIONS} from '../Shared/groupChatOptions';
 import {CHATOPTIONS} from '../Shared/chatOptions'; 
 import Dropdown from './DropdownComponent';
-import {EmojiEmotionsOutlined,AttachFileOutlined,PhotoCamera,Mic,ArrowBack,MoreVert,Phone,Videocam,ArrowRight} from '@material-ui/icons';
+import {Lock,EmojiEmotionsOutlined,AttachFileOutlined,PhotoCamera,Mic,ArrowBack,MoreVert,Phone,Videocam,ArrowRight} from '@material-ui/icons';
 function MainChatComponent(props){
 	const [isDelay,setDelay]=useState(false);
 	const [isListOpen,openList]=useState(false);
 	const [isSubListOpen,openSubList]=useState(false);
+	const linkCloser=()=>{
+		let a=document.getElementsByTagName('a')
+		for(let i of a){
+			i.style.pointerEvents='none';
+		}
+	}
+	const linkEnabler=()=>{
+		let a=document.getElementsByTagName('a')
+		for(let i of a){
+			i.style.pointerEvents='auto';
+		}
+	}
 	// For handling state
 	const toggleList=()=>{
 		openList(true);
+		linkCloser();
 	}
 	const closeList=()=>{
 		openList(false);
+		linkEnabler();
 	}
 	//For handling SubList
 	const toggleSubList=()=>{
 		openSubList(true);
+		linkCloser();
 	}
 	const closeSubList=()=>{
 		openSubList(false);
+		linkEnabler();
 	}
 	function search(){
 
@@ -29,7 +45,6 @@ function MainChatComponent(props){
 	const subListOpener=()=>{
 		toggleSubList();
 		closeList();
-		console.log('YOOOOOOOO')
 	}
 	let list=props.ChatDetails;
 	useEffect(() => {
@@ -44,6 +59,7 @@ function MainChatComponent(props){
 	        function ClickOutside(event) {
 	            if (ref.current && !ref.current.contains(event.target)) {
 	            	closeList();
+	            	closeSubList();
 	            }
 	        }
 	        // Bind the event listener
@@ -123,7 +139,7 @@ function MainChatComponent(props){
 
 					              onClick={eval(item.toggle)}
 					            >
-					            {console.log(item.toggle)}
+					            {/*console.log(item.toggle)*/}
 					            {item.title}
 					            </button>
 								
@@ -132,7 +148,31 @@ function MainChatComponent(props){
 					</div>
 				)
 			}
+			{isSubListOpen &&(
+					<div role='list' className='dropdown-list' ref={wrapperRef}>
+					{
+						dropList[5].submenu.map((item)=>(
+								<button 
+					              className="dropdown-list-item flex-space"
+					              key={item.id}
+
+					              //onClick={eval(item.toggle)}
+					            >
+					            {/*console.log(item.toggle)*/}
+					            	{item.title}
+					            </button>
+								
+							))
+
+					}
+					</div>
+				)
+			}
 			<div className='messages-section'>
+				<div className='message-tip'>
+					<Lock style={{fontSize: '0.8rem'}}/>
+					None of the messages are stored on server, but messages aren't encrypted so chat wisely.    
+				</div>
 				<div className='bottom-wrapper flex-space'>	
 					<div className='input-box-container'>
 						<div className='container flex-space'>
