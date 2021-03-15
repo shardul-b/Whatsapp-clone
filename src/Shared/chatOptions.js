@@ -18,7 +18,7 @@ export const CHATOPTIONS=[
 		title:'Search',
 		key:'chatoption',
 		link:'',
-		toggle:'search'	
+		toggle:'toggleSearch'	
 	},
 	{
 		id:3,

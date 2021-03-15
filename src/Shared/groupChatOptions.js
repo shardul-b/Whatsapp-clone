@@ -18,7 +18,7 @@ export const GROUPCHATOPTIONS=[
 		title:'Search',
 		key:'groupchatoption',
 		link:'',
-		toggle:'search'	
+		toggle:'toggleSearch'	
 	},
 	{
 		id:3,

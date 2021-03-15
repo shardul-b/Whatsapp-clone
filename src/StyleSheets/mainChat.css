@@ -33,6 +33,18 @@
 	/*border:1px solid pink;*/
 	width:30%;
 }
+.dropdown-list-item{
+	/*border:1px solid red;*/
+}
+/*Search*/
+#chat-search{
+	background: transparent;
+	border:0;
+	padding:0.3em;
+	color:#FFF;
+	box-shadow:0 1px 0 0 #FFF;
+	width:60%;
+}
 /*Message Section*/
 .message-tip{
 	background-color: rgb(250,245,12);

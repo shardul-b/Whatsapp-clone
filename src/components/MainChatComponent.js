@@ -2,25 +2,28 @@ import React,{useState,useEffect,useRef} from 'react';
 import {Link} from 'react-router-dom';
 import {GROUPCHATOPTIONS} from '../Shared/groupChatOptions';
 import {CHATOPTIONS} from '../Shared/chatOptions'; 
-import Dropdown from './DropdownComponent';
-import {Lock,EmojiEmotionsOutlined,AttachFileOutlined,PhotoCamera,Mic,ArrowBack,MoreVert,Phone,Videocam,ArrowRight} from '@material-ui/icons';
+// import Dropdown from './DropdownComponent';
+import {Lock,EmojiEmotionsOutlined,AttachFileOutlined,PhotoCamera,Mic,ArrowBack,MoreVert,Phone,Videocam,ArrowRight,ExpandLess,ExpandMore} from '@material-ui/icons';
 function MainChatComponent(props){
 	const [isDelay,setDelay]=useState(false);
 	const [isListOpen,openList]=useState(false);
 	const [isSubListOpen,openSubList]=useState(false);
+	const [isSearchOpen,openSearch]=useState(false);
+	/*Disables Link when the dropdown is open*/
 	const linkCloser=()=>{
 		let a=document.getElementsByTagName('a')
 		for(let i of a){
 			i.style.pointerEvents='none';
 		}
 	}
+	/*Enables Links*/
 	const linkEnabler=()=>{
 		let a=document.getElementsByTagName('a')
 		for(let i of a){
 			i.style.pointerEvents='auto';
 		}
 	}
-	// For handling state
+	// For handling state of List
 	const toggleList=()=>{
 		openList(true);
 		linkCloser();
@@ -38,20 +41,28 @@ function MainChatComponent(props){
 		openSubList(false);
 		linkEnabler();
 	}
-	function search(){
 
-	}
 	//For opening SubList
 	const subListOpener=()=>{
 		toggleSubList();
 		closeList();
 	}
+	// Search Under Construction
+	function toggleSearch(){
+		openSearch(true);
+		closeList();
+	}
+	function closeSearch(){
+		openSearch(false);	
+	}
 	let list=props.ChatDetails;
+	//sets delay of 3 seconds for group info effect
 	useEffect(() => {
 	    setTimeout(() => {
 		      setDelay(true)
 		    }, 3000)
 	}, [isDelay])
+	/*Detect click outside the dropdown*/
 	const wrapperRef = useRef(null);
     OutsideCloser(wrapperRef);
 	function OutsideCloser(ref) {
@@ -60,6 +71,7 @@ function MainChatComponent(props){
 	            if (ref.current && !ref.current.contains(event.target)) {
 	            	closeList();
 	            	closeSubList();
+	            	closeSearch();
 	            }
 	        }
 	        // Bind the event listener
@@ -75,8 +87,9 @@ function MainChatComponent(props){
 
 	return(
 		<div className='chat-profile-section' key={list.id}>
-	{/*Top section*/}
+			{/*Top section*/}
 			<div className='chat-profile-top'>
+				{(!isSearchOpen)?
 				<div className='container flex'>
 					<Link to='/chats' className='flex'>
 						<ArrowBack className='flex' style={{fontSize : '1.5em'}}/>
@@ -114,12 +127,19 @@ function MainChatComponent(props){
 						<Phone/>
 						<MoreVert onClick={toggleList}/>
 					</div>
+				</div>:
+				<div className='flex-space container' ref={wrapperRef}>
+					<ArrowBack style={{fontSize : '1.5em'}} onClick={closeSearch}/>
+					<input type="text" placeholder='Search...' id='chat-search'/>
+					<ExpandLess style={{fontSize : '1.5em'}} />
+					<ExpandMore style={{fontSize : '1.5em'}} />
 				</div>
+				}
 			</div>
+		{/*Dropdown List*/}
 			{isListOpen && (
 					<div role='list' className='dropdown-list' ref={wrapperRef}>
 						{	
-
 							dropList.map((item)=>(
 								
 								(item.link)?
@@ -133,21 +153,26 @@ function MainChatComponent(props){
 						            
 						            </button>
 					            </Link>
-					            :<button 
+					            :<span className='flex'>
+					            <button 
 					              className="dropdown-list-item flex-space"
 					              key={item.id}
-
 					              onClick={eval(item.toggle)}
 					            >
 					            {/*console.log(item.toggle)*/}
 					            {item.title}
+
 					            </button>
 								
+								{(item.title==='More')?
+					            <ArrowRight/>:''}	
+								</span>
 							))
 						}
 					</div>
 				)
 			}
+		{/*Sublist*/}
 			{isSubListOpen &&(
 					<div role='list' className='dropdown-list' ref={wrapperRef}>
 					{
@@ -168,11 +193,14 @@ function MainChatComponent(props){
 					</div>
 				)
 			}
+		{/*Messages*/}
 			<div className='messages-section'>
+				{/*TIP*/}
 				<div className='message-tip'>
 					<Lock style={{fontSize: '0.8rem'}}/>
 					None of the messages are stored on server, but messages aren't encrypted so chat wisely.    
 				</div>
+			{/*Bottom message input*/}
 				<div className='bottom-wrapper flex-space'>	
 					<div className='input-box-container'>
 						<div className='container flex-space'>
