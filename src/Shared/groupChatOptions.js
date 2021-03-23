@@ -3,14 +3,14 @@ export const GROUPCHATOPTIONS=[
 		id:0,
 		title:'Group info',
 		key:'groupchatoption',
-		link:'',
+		link:'/profile/id',
 		toggle:''
 	},
 	{
 		id:1,
 		title:'Group media',
 		key:'groupchatoption',	
-		link:'',
+		link:'/media/id',
 		toggle:''
 	},
 	{

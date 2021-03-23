@@ -10,6 +10,8 @@ import SmallProfile from './SmallProfileComponent';
 import LargeProfile from './LargeProfileComponent';
 import Profile from './ProfileComponent';
 import MainChat from './MainChatComponent';
+import MediaTop from './MediaTopComponent';
+import Media from './MediaComponent';
 const ChatComponent=()=>{
 	return(
 		<div>
@@ -59,6 +61,14 @@ const ProfileComponent=({match})=>{
 		
 	);	
 }
+const MediaComponent=({match})=>{
+	return(
+		<div>
+			<MediaTop profile={CHATS.filter((profile)=>profile.id===parseInt(match.params.profileId, 10))[0]}/>
+			<Media content={CHATS.filter((profile)=>profile.id===parseInt(match.params.profileId, 10))[0].Media}/>	
+		</div>
+	);
+}
 function MainComponent(){
 	//const [details,detailsModify]=useState(CHATS);
 	return(
@@ -71,7 +81,8 @@ function MainComponent(){
 				<Route path='/largeprofile/:profileId' component={LargeProfileBox}/>
               	<Route path='/mainchat/:profileId' component={MainChatComponent}/>
               	<Route path='/profile/:profileId' component={ProfileComponent}/>
-				<Redirect to='/chats' compopnent={ChatComponent}/>		
+              	<Route path='/media/:profileId' component={MediaComponent}/>
+				<Redirect to='/chats' component={ChatComponent}/>		
 			</Switch>
 		</div>
 	);

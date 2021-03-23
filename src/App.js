@@ -11,6 +11,8 @@ import './StyleSheets/home.css';
 import './StyleSheets/status.css';
 import './StyleSheets/calls.css';
 import './StyleSheets/mainChat.css';
+import './StyleSheets/profileDetails.css';
+import './StyleSheets/media.css';
 function App(){
 	return (
 		<BrowserRouter>

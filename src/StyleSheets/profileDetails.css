@@ -1,0 +1,13 @@
+.profile-header{
+	transition: 0.2s;
+	display: fixed;
+	top:0;
+	width:100%;
+}
+.profile-header-image{
+	/*background-size: cover;*/
+}
+.some-dev{
+	height:40em;
+	background: red;
+}

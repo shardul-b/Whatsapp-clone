@@ -12,7 +12,21 @@ export const CHATS=[
 		received:false,
 		missed:false,
 		rejected:false,
-		isGroupCall:false
+		isGroupCall:false,
+		Media:[
+			{
+				link:'/assests/images/Shardul.png',
+				date:'03/18/2021'	
+			},
+			{
+				link:'/assests/images/rise.jpg',
+				date:'02/16/2021'
+			},
+			{
+				link:'/assests/images/sea.jpg',
+				date:'01/16/2021'
+			}
+		]
 	},
 	{
 		id:1,
@@ -28,6 +42,20 @@ export const CHATS=[
 		received:true,
 		missed:true,
 		rejected:false,
-		isGroupCall:false
+		isGroupCall:false,
+		Media:[
+			{
+				link:'/assests/images/logo.png',
+				date:'03/16/2021'	
+			},
+			{
+				link:'/assests/images/valley.jpg',
+				date:'02/16/2021'
+			},
+			{
+				link:'/assests/images/sea.jpg',
+				date:'01/16/2021'
+			}
+		]
 	}
 ]

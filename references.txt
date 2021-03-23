@@ -14,3 +14,5 @@ https://reactjs.org/docs/hooks-effect.html
 https://stackoverflow.com/questions/41340379/passing-multiple-props-to-react-component
 https://stackoverflow.com/questions/359788/how-to-execute-a-javascript-function-when-i-have-its-name-as-a-string
 https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events
+https://stackoverflow.com/questions/58969469/parsing-error-the-link-identifier-has-already-been-declared
+https://stackoverflow.com/questions/27907050/how-to-shrink-an-image-width-based-on-scroll-position

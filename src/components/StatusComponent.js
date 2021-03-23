@@ -42,7 +42,7 @@ function StatusComponent(props){
 				<div className='container'>
 					{
 						list.map((value)=>
-							(value.viewed.every(e=>e==true) && !value.muted )?
+							(value.viewed.every(e=>e===true) && !value.muted )?
 								<div className='viewed-status-block status-block flex'>
 									<div className='viewed-status-image status-image' key={value.id} style={{backgroundImage : `url(${value.stories[1]})`}}>
 									</div>

@@ -3,14 +3,14 @@ export const CHATOPTIONS=[
 		id:0,
 		title:'View contact',
 		key:'chatoption',
-		link:`/profile/`,
+		link:"/profile/id",
 		toggle:''	
 	},
 	{
 		id:1,
 		title:'Media, links, and docs',
 		key:'chatoption',
-		link:'',
+		link:'/media/id',
 		toggle:''	
 	},
 	{

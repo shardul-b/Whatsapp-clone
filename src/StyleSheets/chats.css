@@ -70,7 +70,12 @@
 }
 .personal-chat-icons{
 	/*border:1px solid red;*/
-	width:40%;
+	width:90%;
+	margin:0 auto;
+}
+.group-chat-icons{
+	/*border:1px solid red;*/
+	width:60%;
 }
 a+a{
 	margin-left:1.5em;

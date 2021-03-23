@@ -24,7 +24,7 @@ function LargeProfileComponent(props){
 				</div>
 			</div>
 			<div className='profile-image-large'>
-				<img src={list.profile}/>
+				<img src={list.profile} alt={list.name}/>
 			</div>
 		</div>
 	);

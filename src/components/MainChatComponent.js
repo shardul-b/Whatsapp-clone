@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {GROUPCHATOPTIONS} from '../Shared/groupChatOptions';
 import {CHATOPTIONS} from '../Shared/chatOptions'; 
 // import Dropdown from './DropdownComponent';
+
 import {Lock,EmojiEmotionsOutlined,AttachFileOutlined,PhotoCamera,Mic,ArrowBack,MoreVert,Phone,Videocam,ArrowRight,ExpandLess,ExpandMore} from '@material-ui/icons';
 function MainChatComponent(props){
 	const [isDelay,setDelay]=useState(false);
@@ -11,14 +12,14 @@ function MainChatComponent(props){
 	const [isSearchOpen,openSearch]=useState(false);
 	/*Disables Link when the dropdown is open*/
 	const linkCloser=()=>{
-		let a=document.getElementsByTagName('a')
+		let a=document.getElementsByClassName('common-link')
 		for(let i of a){
 			i.style.pointerEvents='none';
 		}
 	}
 	/*Enables Links*/
 	const linkEnabler=()=>{
-		let a=document.getElementsByTagName('a')
+		let a=document.getElementsByClassName('common-link')
 		for(let i of a){
 			i.style.pointerEvents='auto';
 		}
@@ -91,7 +92,7 @@ function MainChatComponent(props){
 			<div className='chat-profile-top'>
 				{(!isSearchOpen)?
 				<div className='container flex'>
-					<Link to='/chats' className='flex'>
+					<Link to='/chats' className='flex common-link'>
 						<ArrowBack className='flex' style={{fontSize : '1.5em'}}/>
 						<div className='chat-top-profile-image' style={{backgroundImage : `url(${list.profile})`}}>
 							
@@ -99,7 +100,7 @@ function MainChatComponent(props){
 					</Link>
 					
 						<div className='name-details'>
-							<Link to={`/profile/${list.id}`}>
+							<Link to={`/profile/${list.id}`} className='common-link'>
 								<span className='chat-profile-name'>{list.name}</span>
 								{(list.isGroup)?
 									<div className='group-details'>
@@ -141,19 +142,18 @@ function MainChatComponent(props){
 					<div role='list' className='dropdown-list' ref={wrapperRef}>
 						{	
 							dropList.map((item)=>(
-								
 								(item.link)?
 								
-								<Link to={`${item.link}`} key={item.id}>
 									<button 
 						              className="dropdown-list-item flex-space"
 						              key={item.id}
 						            >
+						            <Link to={item.link.replace('id',list.id)} key={item.id}>
 						            {item.title}
-						            
+						            </Link>
 						            </button>
-					            </Link>
-					            :<span className='flex'>
+					            
+					            :<span className='flex' key={item.id}>
 					            <button 
 					              className="dropdown-list-item flex-space"
 					              key={item.id}

@@ -18,21 +18,28 @@ function SmallProfileComponent(props){
 						</div>
 					</Link>
 					<div className='small-profile-icons-block'>
-						<div className='container flex-space'>
-							<Link to={`/mainchat/${list.id}`} className='flex'>
-								<Chat style={{color:'#075E54',fontSize:'1.3em'}}/>
-							</Link>
+						
 							{
 								!list.isGroup?
 								<div className='personal-chat-icons flex-space'>
+									<Link to={`/mainchat/${list.id}`} className='flex'>
+										<Chat style={{color:'#075E54',fontSize:'1.3em'}}/>
+									</Link>
 									<Phone style={{color:'#075E54',fontSize:'1.4em'}}/>
 									<Videocam style={{color:'#075E54',fontSize:'1.4em'}} />
-								</div>:null
+									<Link to={`/profile/${list.id}`} className='flex'>
+										<InfoOutlined style={{color:'#075E54',fontSize:'1.4em'}}/>{/*profile info icon*/}
+									</Link>
+								</div>:
+								<div className='container flex-space group-chat-icons'>
+									<Link to={`/mainchat/${list.id}`} className='flex'>
+										<Chat style={{color:'#075E54',fontSize:'1.3em'}}/>
+									</Link>
+									<Link to={`/profile/${list.id}`} className='flex'>
+										<InfoOutlined style={{color:'#075E54',fontSize:'1.4em'}}/>{/*profile info icon*/}
+									</Link>
+								</div>
 							}
-							<Link to={`/profile/${list.id}`} className='flex'>
-								<InfoOutlined style={{color:'#075E54',fontSize:'1.4em'}}/>{/*profile info icon*/}
-							</Link>
-						</div>
 					</div>
 				</div>
 			</div>
