@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {CameraAlt,Add,Create,KeyboardArrowDown,KeyboardArrowUp} from '@material-ui/icons';
 function StatusComponent(props){
 	let list=props.StatusDetails;
 	//console.log(list);
@@ -61,8 +62,9 @@ function StatusComponent(props){
 				</div>
 			</div>
 			<div className='muted-wrapper wrapper'>
-				<div className='container'>
+				<div className='container flex-space'>
 					Muted updates
+					<KeyboardArrowDown/>
 				</div>
 			</div>
 			<div className='muted-status'>
@@ -84,6 +86,14 @@ function StatusComponent(props){
 								:null
 						)
 					}
+				</div>
+			</div>
+			<div className='status-icons'>
+				<div className='new-icon text-status-icon'>
+					<Create/>
+				</div>
+				<div className='new-icon camera-icon'>
+					<CameraAlt style={{color:'#FFF'}}/>
 				</div>
 			</div>
 		</div>

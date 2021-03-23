@@ -1,16 +1,7 @@
 .call-time{
 	margin-left: 0.5em;
 }
-.new-call-icon{
+/*.new-call-icon{
 	background-color: green;
-	height:3em;
-	width:3em;
 	z-index: 3;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	right:0.5em;
-	bottom:0.5em;
-}
+}*/

@@ -47,7 +47,7 @@ function CallComponent(props){
 				
 				
 			</div>
-			<div className='new-call-icon'>
+			<div className='new-icon new-call-icon'>
 				<AddIcCall style={{color:'#FFF'}}/>
 			</div>
 		</div>

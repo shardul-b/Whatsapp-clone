@@ -80,3 +80,20 @@
 a+a{
 	margin-left:1.5em;
 }
+.new-icon{
+	background: #10e313;
+	height:3em;
+	width:3em;
+	border-radius: 50%;
+	position: absolute;
+	bottom:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right:0.7em;
+	bottom:0.7em;
+	box-shadow: 3px 3px 12px 0 gray;
+}
+.new-icon-image{
+	max-width:50%;
+}
