@@ -13,6 +13,8 @@ import './StyleSheets/calls.css';
 import './StyleSheets/mainChat.css';
 import './StyleSheets/profileDetails.css';
 import './StyleSheets/media.css';
+import './StyleSheets/contacts.css';
+import './StyleSheets/contactsTop.css';
 function App(){
 	return (
 		<BrowserRouter>

@@ -1,0 +1,21 @@
+.contacts-top{
+	 background-color: #075E54;
+	 padding:0.6em 0;
+	 width: 100%;
+}
+.contacts-top-text{
+	margin-left:1em;
+}
+.contact-title,.contact-length{
+	display:block;
+	color:#FFF;
+}
+.contact-length{
+	font-size: 0.8rem;
+}
+.contacts-top-icons{
+	margin-left:auto;
+	width:20%;
+	display: flex;
+	justify-content: space-between;
+}

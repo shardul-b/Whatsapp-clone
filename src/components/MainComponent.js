@@ -4,6 +4,7 @@ import Top from './TopComponent';
 import Chats from './ChatComponent';
 import {CHATS} from '../Shared/chats';
 import {STATUS} from '../Shared/status';
+import {CONTACTS} from '../Shared/contacts';
 import Status from './StatusComponent';
 import Call from './CallComponent';
 import SmallProfile from './SmallProfileComponent';
@@ -12,6 +13,8 @@ import Profile from './ProfileComponent';
 import MainChat from './MainChatComponent';
 import MediaTop from './MediaTopComponent';
 import Media from './MediaComponent';
+import Contacts from './ContactsComponent';
+import ContactsTop from './ContactsTopComponent';
 const ChatComponent=()=>{
 	return(
 		<div>
@@ -69,6 +72,14 @@ const MediaComponent=({match})=>{
 		</div>
 	);
 }
+const ContactsComponent=()=>{
+	return(
+		<div>
+			<ContactsTop length={CONTACTS.length}/>
+			<Contacts details={CONTACTS}/>
+		</div>
+	)
+}
 function MainComponent(){
 	//const [details,detailsModify]=useState(CHATS);
 	return(
@@ -82,6 +93,7 @@ function MainComponent(){
               	<Route path='/mainchat/:profileId' component={MainChatComponent}/>
               	<Route path='/profile/:profileId' component={ProfileComponent}/>
               	<Route path='/media/:profileId' component={MediaComponent}/>
+              	<Route path='/contacts' component={ContactsComponent}></Route>
 				<Redirect to='/chats' component={ChatComponent}/>		
 			</Switch>
 		</div>

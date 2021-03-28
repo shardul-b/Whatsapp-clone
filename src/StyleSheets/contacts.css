@@ -1,0 +1,38 @@
+/*Top contact area*/
+.new-group-image-container,.new-contact-image-container{
+	background: #10e313;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.new-contact-image{
+	
+}
+.contact-wrapper{
+	padding:0.5em 0;
+}
+.contact-details-container{
+	width: 80%;
+	margin-left:0.8em;
+}
+.contact-about,.contact-name{
+	display: block;
+	/*border:1px solid red;*/
+}
+.contact-about{
+	color:gray;
+	font-size: 0.8rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.contact-image-container{
+	/*border:1px solid red;*/
+	height: 2em;
+	width:2em;	
+	text-align: center;
+}
+.contact-image{
+	border-radius: 50%;
+}
