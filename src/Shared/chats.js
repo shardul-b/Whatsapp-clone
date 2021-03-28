@@ -13,6 +13,7 @@ export const CHATS=[
 		missed:false,
 		rejected:false,
 		isGroupCall:false,
+		about:'Hey there! I am using WhatsApp',
 		Media:[
 			{
 				link:'/assests/images/Shardul.png',
@@ -43,6 +44,7 @@ export const CHATS=[
 		missed:true,
 		rejected:false,
 		isGroupCall:false,
+		about:'Hey there! I am not using WhatsApp',
 		Media:[
 			{
 				link:'/assests/images/logo.png',

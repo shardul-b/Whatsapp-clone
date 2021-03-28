@@ -1,6 +1,7 @@
 import React from 'react';
 import  {Link} from 'react-router-dom';
 import { InfoOutlined,Phone,Chat,Videocam } from '@material-ui/icons';
+
 function SmallProfileComponent(props){
 	let list=props.profiles;
 	return(	

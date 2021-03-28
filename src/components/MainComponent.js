@@ -4,7 +4,7 @@ import Top from './TopComponent';
 import Chats from './ChatComponent';
 import {CHATS} from '../Shared/chats';
 import {STATUS} from '../Shared/status';
-import {CONTACTS} from '../Shared/contacts';
+// import {CONTACTS} from '../Shared/contacts';
 import Status from './StatusComponent';
 import Call from './CallComponent';
 import SmallProfile from './SmallProfileComponent';
@@ -47,8 +47,8 @@ const CallComponent=()=>{
 const SmallProfileBox=({match})=>{
 	return(
 		<div>
-			<Top/>
-			<Chats ChatDetails={CHATS}/>
+			{/*<Top/>
+			<Chats ChatDetails={CHATS}/>*/}
 			<SmallProfile profiles={CHATS.filter((profile)=>profile.id===parseInt(match.params.profileId, 10))[0]}/>
 		</div>
 	);	
@@ -75,8 +75,8 @@ const MediaComponent=({match})=>{
 const ContactsComponent=()=>{
 	return(
 		<div>
-			<ContactsTop length={CONTACTS.length}/>
-			<Contacts details={CONTACTS}/>
+			<ContactsTop length={CHATS.length}/>
+			<Contacts details={CHATS}/>
 		</div>
 	)
 }

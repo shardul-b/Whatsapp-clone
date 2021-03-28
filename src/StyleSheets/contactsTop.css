@@ -1,4 +1,7 @@
-.contacts-top{
+.dropdown-list-item a{
+	font-size: 0.9rem;
+}
+.contacts-top,.contacts-search-container{
 	 background-color: #075E54;
 	 padding:0.6em 0;
 	 width: 100%;
@@ -18,4 +21,12 @@
 	width:20%;
 	display: flex;
 	justify-content: space-between;
+}
+.contacts-search-container{
+	background-color: #FFF;
+	box-shadow: 0 1px 5px 0 darkgray;
+}
+.contacts-search{
+	border:0;
+	margin-left:0.8em;
 }

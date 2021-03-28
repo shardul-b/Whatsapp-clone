@@ -1,3 +1,4 @@
+/*Not used*/
 export const CONTACTS=[
 	{
 		id:0,

@@ -61,7 +61,7 @@ function ChatComponent(props){
 		</div>
 		<Link to='/contacts'>
 			<div className='new-icon'>
-				<img src="assests/icons/whatsapp_new_msg.png" class='new-icon-image' alt="new" />
+				<img src="assests/icons/whatsapp_new_msg.png" className='new-icon-image' alt="new" />
 			</div>
 		</Link>
 		</div>

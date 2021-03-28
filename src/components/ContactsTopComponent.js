@@ -31,19 +31,19 @@ function ContactsTopComponent(props){
 	];
 	const [isListOpen,openList]=useState(false);
 	const [isSearchOpen,openSearch]=useState(false);
-	// const linkCloser=()=>{
-	// 	let a=document.getElementsByClassName('common-link')
-	// 	for(let i of a){
-	// 		i.style.pointerEvents='none';
-	// 	}
-	// }
-	// Enables Links
-	// const linkEnabler=()=>{
-	// 	let a=document.getElementsByClassName('common-link')
-	// 	for(let i of a){
-	// 		i.style.pointerEvents='auto';
-	// 	}
-	// }
+	const linkCloser=()=>{
+		let a=document.getElementsByClassName('common-link')
+		for(let i of a){
+			i.style.pointerEvents='none';
+		}
+	}
+	/*Enables Links*/
+	const linkEnabler=()=>{
+		let a=document.getElementsByClassName('common-link')
+		for(let i of a){
+			i.style.pointerEvents='auto';
+		}
+	}
 	// For handling state of List
 	const refresh=()=>{
 		
@@ -82,17 +82,27 @@ function ContactsTopComponent(props){
 	    }, [ref]);
 	}
 	return(
+		(isSearchOpen)?
+			<div className='shared-search contacts-search-container'>
+				<div className='container flex'>
+					<ArrowBack style={{color:'#075E54'}} onClick={closeSearch}/>
+					<input type='text' className='contacts-search' placeholder='Search...'/>
+				</div>
+			</div>:
 		<div className='contacts-top shared-top'>
-			<div className='container flex'>
-				<ArrowBack style={{color:'#FFF'}}/>
-				<div className='contacts-top-text'>
-					<span className='contact-title'>Select Contact</span>
-					<span className='contact-length'>{props.length} contacts</span>
-				</div>
-				<div className='contacts-top-icons'>
-					<Search style={{color:'#FFF'}}/>
-					<MoreVert style={{color:'#FFF'}} onClick={toggleList}/>
-				</div>
+					<div className='container flex'>
+						<Link to={'/chats'}>
+							<ArrowBack style={{color:'#FFF'}}/>
+						</Link>
+						<div className='contacts-top-text'>
+							<span className='contact-title'>Select Contact</span>
+							<span className='contact-length'>{props.length} contacts</span>
+						</div>
+						<div className='contacts-top-icons'>
+							<Search style={{color:'#FFF'}} onClick={toggleSearch}/>
+							<MoreVert style={{color:'#FFF'}} onClick={toggleList}/>
+						</div>
+					</div>
 				{isListOpen&& (
 					//console.log(options)
 					<div role='list' className='dropdown-list' ref={wrapperRef}>
@@ -114,7 +124,6 @@ function ContactsTopComponent(props){
 					              key={item.id}
 					              onClick={eval(item.toggle)}
 					            >
-					            {console.log(options)}
 					            {item.title}
 					            </button>
 									
@@ -124,8 +133,8 @@ function ContactsTopComponent(props){
 					</div>
 				)
 			}
-			</div>
 		</div>
+		
 	);
 }
 
