@@ -6,8 +6,8 @@
 	align-items: center;
 	justify-content: center;
 }
-.new-contact-image{
-	
+.invite-container,.help-container{
+	background-color: transparent;
 }
 .contact-wrapper{
 	padding:0.5em 0;
@@ -15,9 +15,13 @@
 .contact-details-container{
 	width: 80%;
 	margin-left:0.8em;
+	flex-grow: 2;
+	flex-shrink: 0;
 }
 .contact-about,.contact-name{
 	display: block;
+	width:100%;
+	
 	/*border:1px solid red;*/
 }
 .contact-about{

@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useRef} from 'react';
 import { Link } from 'react-router-dom';
-import {People,PersonAdd} from '@material-ui/icons';
+import {People,PersonAdd,Help,Share} from '@material-ui/icons';
 import Chat from './MainChatComponent';
 import SmallProfile from './SmallProfileComponent';
 import {CHATS} from '../Shared/chats';
@@ -75,8 +75,8 @@ function ContactsComponent(props){
 									<div className='contact-image-container' onClick={()=>smallprofile(contact.id)}>
 										<img src={contact.profile} alt="AB" className='contact-image'/>
 									</div>
-								<Link to={`/mainchat/${contact.id}`}>
-									<div className='contact-details-container'>
+								<Link to={`/mainchat/${contact.id}`} className='contact-details-container'>
+									<div >
 										<span className='contact-name'>
 											{contact.name}
 										</span>
@@ -88,6 +88,26 @@ function ContactsComponent(props){
 							</div>
 						))
 					}
+				</div>
+				<div className='invite-contact contact-wrapper flex'>
+					<div className='contact-image-container new-group-image-container invite-container'>
+						<Share style={{color:'gray'}} className='contact-image'/>
+					</div>
+					<div className='contact-details-container invite'>
+						<span className='contact-name'>
+							Invite friends
+						</span>
+					</div>
+				</div>
+				<div className='help-contact contact-wrapper flex'>
+					<div className='contact-image-container new-group-image-container help-container'>
+						<Help style={{color:'gray'}} className='contact-image'/>
+					</div>
+					<div className='contact-details-container help'>
+						<span className='contact-name'>
+							Contacts help
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
