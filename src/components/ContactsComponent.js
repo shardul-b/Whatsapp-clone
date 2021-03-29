@@ -12,12 +12,38 @@ function ContactsComponent(props){
 		openProfile(true)
 		setId(id);
 	}
+	const closeSmallProfile=()=>{
+		openProfile(false)
+		setId(null);	
+	}
+	const wrapperRef = useRef(null);
+    OutsideCloser(wrapperRef);
+	function OutsideCloser(ref) {
+	    useEffect(() => {
+	        function ClickOutside(event) {
+	            if (ref.current && !ref.current.contains(event.target)) {
+	            	closeSmallProfile();
+	            }
+	        }
+	        // Bind the event listener
+	        document.addEventListener("mousedown", ClickOutside);
+	        return () => {
+	            // Unbind the event listener on clean up
+	            document.removeEventListener("mousedown", ClickOutside);
+	        };
+	    }, [ref]);
+	}
 	return(
 		
 		<div className='contacts-container'>
 			{
 				(isProfileOpen)?
-				<SmallProfile profiles={CHATS.filter((profile)=>profile.id===parseInt(idExists, 10))[0]}/>:
+				<div className='small-profile-back'>
+					<div ref={wrapperRef}>
+						<SmallProfile profiles={CHATS.filter((profile)=>profile.id===parseInt(idExists, 10))[0]}/>
+					</div>
+				</div>
+					:	
 				''
 			}
 			<div className='container'>

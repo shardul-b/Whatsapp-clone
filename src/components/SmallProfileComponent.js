@@ -5,8 +5,8 @@ import { InfoOutlined,Phone,Chat,Videocam } from '@material-ui/icons';
 function SmallProfileComponent(props){
 	let list=props.profiles;
 	return(	
-		<Link to='/chats'>
-			<div className='small-profile-back'>
+		// <Link to={props.link}>
+			// <div className='small-profile-back'>
 				<div className='small-profile-block'>
 					<Link to={`/largeprofile/${list.id}`}>
 						<div className='small-profile-image-name'>
@@ -43,8 +43,8 @@ function SmallProfileComponent(props){
 							}
 					</div>
 				</div>
-			</div>
-		</Link>
+			// </div>
+		// </Link>
 	);
 }
 export default SmallProfileComponent;
