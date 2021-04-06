@@ -18,3 +18,5 @@ https://stackoverflow.com/questions/58969469/parsing-error-the-link-identifier-h
 https://stackoverflow.com/questions/27907050/how-to-shrink-an-image-width-based-on-scroll-position
 https://stackoverflow.com/questions/55265604/uncaught-invariant-violation-too-many-re-renders-react-limits-the-number-of-re
 https://stackoverflow.com/questions/55625431/warning-validatedomnesting-a-cannot-appear-as-a-descendant-of-a
+https://www.w3schools.com/howto/howto_js_snackbar.asp
+https://www.techiediaries.com/react-usestate-hook-update-array/

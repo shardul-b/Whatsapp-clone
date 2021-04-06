@@ -47,16 +47,18 @@ function ContactsComponent(props){
 				''
 			}
 			<div className='container'>
-				<div className='new-group contact-wrapper flex'>
-					<div className='contact-image-container new-group-image-container'>
-						<People style={{color:'#FFF',fontSize: '1.2rem'}} className='contact-image new-group-image'/>
+				<Link to={'/group'}>
+					<div className='new-group contact-wrapper flex'>
+						<div className='contact-image-container new-group-image-container'>
+							<People style={{color:'#FFF',fontSize: '1.2rem'}} className='contact-image new-group-image'/>
+						</div>
+						<div className='contact-details-container'>
+							<span className='contact-name'>
+								New group 
+							</span>
+						</div>
 					</div>
-					<div className='contact-details-container'>
-						<span className='contact-name'>
-							New group 
-						</span>
-					</div>
-				</div>
+				</Link>
 				<div className='new-contact contact-wrapper flex'>
 					<div className='contact-image-container new-contact-image-container'>
 						<PersonAdd style={{color:'#FFF',fontSize: '1.2rem'}} className='contact-image new-contact-image'/>

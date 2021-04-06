@@ -40,3 +40,28 @@
 .contact-image{
 	border-radius: 50%;
 }
+/*Groups code below*/
+.members-area{
+	padding:0.5em 0;
+}
+.member-image{
+	height:2.8em;
+	width:2.8em;	
+	border:1px solid red;
+}
+.member-name{
+	width:5em;
+}
+.close{
+	text-align: center;
+	display: block;
+	height:1.2em;
+	width:1.2em;
+	border: 2px solid #FFF;
+	background-color: gray;
+	border-radius: 50%;
+	z-index:2;
+	position:absolute;
+	margin-top:-1em;
+	margin-left:1.7em;
+}

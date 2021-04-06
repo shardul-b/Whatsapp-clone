@@ -7,7 +7,7 @@ import {STATUS} from '../Shared/status';
 // import {CONTACTS} from '../Shared/contacts';
 import Status from './StatusComponent';
 import Call from './CallComponent';
-import SmallProfile from './SmallProfileComponent';
+// import SmallProfile from './SmallProfileComponent';
 import LargeProfile from './LargeProfileComponent';
 import Profile from './ProfileComponent';
 import MainChat from './MainChatComponent';
@@ -15,6 +15,7 @@ import MediaTop from './MediaTopComponent';
 import Media from './MediaComponent';
 import Contacts from './ContactsComponent';
 import ContactsTop from './ContactsTopComponent';
+import Group from './GroupComponent';
 const ChatComponent=()=>{
 	return(
 		<div>
@@ -44,15 +45,13 @@ const CallComponent=()=>{
 		</div>
 	);
 }
-const SmallProfileBox=({match})=>{
+/*const SmallProfileBox=({match})=>{
 	return(
 		<div>
-			{/*<Top/>
-			<Chats ChatDetails={CHATS}/>*/}
 			<SmallProfile profiles={CHATS.filter((profile)=>profile.id===parseInt(match.params.profileId, 10))[0]}/>
 		</div>
 	);	
-}
+}*/
 const LargeProfileBox=({match})=>{
 	return(
 		<LargeProfile profile={CHATS.filter((profile)=>profile.id===parseInt(match.params.profileId, 10))[0]}/>
@@ -80,6 +79,11 @@ const ContactsComponent=()=>{
 		</div>
 	)
 }
+const GroupComponent=()=>{
+	return(
+		<Group details={CHATS}/>
+	)
+}
 function MainComponent(){
 	//const [details,detailsModify]=useState(CHATS);
 	return(
@@ -88,12 +92,13 @@ function MainComponent(){
 				<Route path='/chats' component={ChatComponent}/>
 				<Route path='/status' component={StatusComponent}/>
 				<Route path='/call' component={CallComponent}/>
-				<Route path='/smallprofile/:profileId' component={SmallProfileBox}/>
+				{/*<Route path='/smallprofile/:profileId' component={SmallProfileBox}/>*/}
 				<Route path='/largeprofile/:profileId' component={LargeProfileBox}/>
               	<Route path='/mainchat/:profileId' component={MainChatComponent}/>
               	<Route path='/profile/:profileId' component={ProfileComponent}/>
               	<Route path='/media/:profileId' component={MediaComponent}/>
               	<Route path='/contacts' component={ContactsComponent}></Route>
+              	<Route path='/group' component={GroupComponent}></Route>
 				<Redirect to='/chats' component={ChatComponent}/>		
 			</Switch>
 		</div>
