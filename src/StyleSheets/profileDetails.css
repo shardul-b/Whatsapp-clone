@@ -1,13 +1,40 @@
 .profile-header{
-	transition: 0.2s;
-	display: fixed;
+	position: fixed;
 	top:0;
 	width:100%;
+	left: 0;
 }
-.profile-header-image{
-	/*background-size: cover;*/
+
+.profile-header-color,.profile-header-name{
+	box-shadow:0 0 5px 8px rgba(0, 0, 0, 0.15);
+	background-color: rgba(0, 0, 0, 0.15);
+
+}
+.profile-header-image-container{
+	transition: all linear 1s;
+	margin-top: -2em;
+	height: 22em;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+}
+
+.profile-header-name{
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	font-size: 1.3rem;
+	color: #FFF;
+	padding: 0.5em;
+	width: 100%;
+	transition: all linear 1s;
+}
+.profile-header-fixed{
+	height: 0px;
+	font-size: 1rem;
 }
 .some-dev{
-	height:40em;
+	height:160em;
 	background: red;
 }
