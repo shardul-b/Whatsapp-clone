@@ -1,3 +1,7 @@
+# Whatsapp Clone V0.1
+
+## This project was created for fun and eventually got ignored due to my focus on backend-related stuff. Hopefully, in the near future, I will improve this project
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
